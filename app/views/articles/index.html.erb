@@ -1,0 +1,17 @@
+<h1>SCIENCE SPACE KITTY BLOG</h1>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7wRz8J5GfBhx7CunPt0H2LaSG-bx7q72olCV9Ef7kSi4_BUay"/>
+<%= link_to 'New Article', new_article_path, class: "big button"%>
+ <table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+    <th>Actions</th>
+  </tr>
+  <% @articles.each do |article| %>
+    <tr>
+      <td><%= article.title %></td>
+      <td><%= article.text %></td>
+      <td><%= link_to 'Show', article_path(article), class: "small button"%></td>
+    </tr>
+  <% end %>
+</table>
